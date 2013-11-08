@@ -17,9 +17,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "jira-rest"
   gem.homepage = "http://github.com/tiago.l.nobre@gmail.com/jira-rest"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "superbock"
+  gem.summary = %Q{JIRA REST API}
+  gem.description = %Q{}
+  gem.email = "tiago.l.nobre@gmail.com"
   gem.authors = ["tiago.l.nobre@gmail.com"]
   # dependencies defined in Gemfile
 end
@@ -31,6 +31,14 @@ Rake::TestTask.new(:test) do |test|
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
 end
+
+require 'cucumber'
+require 'cucumber/rake/task'
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "--format pretty"
+end
+
+task :default => :features
 
 require 'rcov/rcovtask'
 Rcov::RcovTask.new do |test|
