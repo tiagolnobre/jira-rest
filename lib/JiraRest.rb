@@ -39,6 +39,7 @@ class JiraRest
       all_versions << version_array['name']
     end  
         
+        
     @all_versions = all_versions.sort_by { |a| a.split('.').map &:to_i }
     @actual_version = version_name.empty? ? @all_versions[@all_versions.index(hash_versions.sort_by { |k, v| v }.last[0]) + 1] : version_name.sort_by { |a| a.split('.').map &:to_i }.first
 
