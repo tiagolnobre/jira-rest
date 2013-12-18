@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee70ac8c71dd93de5c66d51c704d28b251b51adb
 language: ruby
 rvm:
   - "1.8.7"
