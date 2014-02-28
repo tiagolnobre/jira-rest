@@ -2,14 +2,8 @@ module JiraRest
   class Search
     Url = Struct.new(:jql, :fields, :maxresults)
 
-
     def initialize(params)
-
       @token = params.token
-      #jira_url = "#{jira_host}/rest/api/latest/"
-      #
-      #@token = generate jira_url, username, password
-
     end
 
 
@@ -70,10 +64,5 @@ module JiraRest
       response = Client.get @token.url + search_url, @token.header
       Client.parse_search_result(response)
     end
-
-
   end
 end
-
-
-#JiraRest::Search.new('https://jira.atlassian.com', 'tiago.l.nobre', '123qweasd')
