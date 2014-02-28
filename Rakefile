@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "jira-rest"
-  gem.homepage = "http://github.com/tiago.l.nobre@gmail.com/jira-rest"
+  gem.homepage = "http://github.com/macwadu/jira-rest"
   gem.license = "MIT"
   gem.summary = %Q{JIRA REST API}
   gem.description = %Q{}
@@ -39,14 +39,6 @@ Cucumber::Rake::Task.new(:features) do |t|
 end
 
 task :default => :features
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
 
 task :default => :test
 
