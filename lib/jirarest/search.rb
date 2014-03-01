@@ -4,12 +4,7 @@ module JiraRest
 
 
     def initialize(params)
-
       @token = params.token
-      #jira_url = "#{jira_host}/rest/api/latest/"
-      #
-      #@token = generate jira_url, username, password
-
     end
 
 

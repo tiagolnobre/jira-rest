@@ -115,7 +115,5 @@ module JiraRest
           return Response.new(false, nil, 'fail')
       end
     end
-
-
   end
 end
