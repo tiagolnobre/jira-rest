@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date                      = '2013-11-08'
   s.description               = ''
   s.email                     = 'tiago.l.nobre@gmail.com'
-  s.extra_rdoc_files          = %w( LICENSE README.md )
+  s.extra_rdoc_files          = %w( LICENSE.txt README.md )
   s.files                     = Dir.glob('{lib}/**/*')
   s.test_files                = s.files.grep(%r{^(test|spec|features)/})
   s.homepage                  = 'http://github.com/macwadu/jira-rest'
@@ -26,5 +26,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake', '~> 10.1')
   s.add_development_dependency('yard', '~> 0.8')
   s.add_development_dependency('yard-cucumber', '~> 2.3')
+  s.add_development_dependency('redcarpet','~> 3.1')
 end
 
