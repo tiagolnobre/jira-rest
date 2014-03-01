@@ -69,6 +69,3 @@ module JiraRest
 
   end
 end
-
-
-#JiraRest::Search.new('https://jira.atlassian.com', 'tiago.l.nobre', '123qweasd')
