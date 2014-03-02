@@ -20,7 +20,8 @@ YARD::Rake::YardocTask.new do |t|
   %x(yard config load_plugins true)
 
   t.files = %w[lib/**/*.rb features/**/*.feature features/**/*.rb - README.md]
-  t.options = %w(-M kramdown)
+  t.yard_markup = :markdown
+  t.options = %w(-M kramdown --output-dir /Users/tiagonobre/Downloads/jira-rest/jira-rest.wiki)
 end
 
 task :default => :features

@@ -6,3 +6,11 @@ rvm:
   - rbx
   - ruby-head
   - jruby-head
+
+
+deploy:
+  on: integration
+
+platforms :ruby-head do
+  gem 'minitest'
+end

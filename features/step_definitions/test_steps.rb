@@ -1,6 +1,6 @@
+require 'test/unit'
 include Test::Unit::Assertions
 require 'jirarest'
-require 'test/unit'
 
 Given /^I create instantiation of Jira with authentication$/ do
   @jira = JiraRest::Client.new('https://jira.atlassian.com', 'tiago.l.nobre', '123qweasd')
