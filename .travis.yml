@@ -12,6 +12,3 @@ deploy:
   on:
     all_branches: true
 
-platforms :ruby-head do
-  gem 'minitest'
-end
