@@ -18,10 +18,11 @@ end
 YARD::Rake::YardocTask.new do |t|
   %x(mkdir ~/.yard) unless File.exists? File.expand_path('~/.yard')
   %x(yard config load_plugins true)
-  t.files = %w[lib/**/*.rb test/features/**/*.feature test/features/**/*.rb - README.md]
+
+  t.files = %w[lib/**/*.rb features/**/*.feature features/**/*.rb - README.md]
+  t.options = %w(-M kramdown)
 end
 
 task :default => :features
 
 task :default => :test
-

@@ -2,7 +2,6 @@ module JiraRest
   class Search
     Url = Struct.new(:jql, :fields, :maxresults)
 
-
     def initialize(params)
       @token = params.token
     end
@@ -33,8 +32,8 @@ module JiraRest
 
       return filter_url unless filter_url.success
 
-        filter_response = Client.get filter_url.body, @token.header
-        Client.parse_search_result filter_response
+      filter_response = Client.get filter_url.body, @token.header
+      Client.parse_search_result filter_response
 
     end
 
@@ -65,7 +64,5 @@ module JiraRest
       response = Client.get @token.url + search_url, @token.header
       Client.parse_search_result(response)
     end
-
-
   end
 end
