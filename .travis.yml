@@ -9,7 +9,8 @@ rvm:
 
 
 deploy:
-  on: integration
+  on:
+    all_branches: true
 
 platforms :ruby-head do
   gem 'minitest'
