@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: JiraRest::Search
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/cucumber.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/cucumber.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../JiraRest.html" title="JiraRest (module)">JiraRest</a></span></span>
+     &raquo; 
+    <span class="title">Search</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="feature_list_link"
+        href="../feature_list.html">
+      Features
+    </a>
+  
+    <a class="full_list_link" id="featuredirectories_list_link"
+        href="../featuredirectories_list.html">
+      Features by Directory
+    </a>
+  
+    <a class="full_list_link" id="tag_list_link"
+        href="../tag_list.html">
+      Tags
+    </a>
+  
+    <a class="full_list_link" id="step_list_link"
+        href="../step_list.html">
+      Steps
+    </a>
+  
+    <a class="full_list_link" id="stepdefinition_list_link"
+        href="../stepdefinition_list.html">
+      Step Defs
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: JiraRest::Search
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">JiraRest::Search</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/jirarest/search.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Search/Url.html" title="JiraRest::Search::Url (class)">Url</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#filter-instance_method" title="#filter (instance method)">- (Object) <strong>filter</strong>(id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>get tickets from filter id.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Search) <strong>initialize</strong>(params) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>A new instance of Search.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#issue-instance_method" title="#issue (instance method)">- (Object) <strong>issue</strong>(issue_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#jqlquery-instance_method" title="#jqlquery (instance method)">- (Object) <strong>jqlquery</strong>(jql_string, return_fields = nil, maxresults = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>get tickets from by a jql query.</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_by_hash-instance_method" title="#query_by_hash (instance method)">- (Object) <strong>query_by_hash</strong>(hash_tickets, return_fields = nil, maxresults = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>get tickets by hash.</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="JiraRest::Search (class)">Search</a></span></tt>) <strong>initialize</strong>(params) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    Returns a new instance of Search
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 5</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='ivar'>@token</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="filter-instance_method">
+  
+    - (<tt>Object</tt>) <strong>filter</strong>(id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    get tickets from filter id
+
+@param[Integer/String] if filter id
+@return[JiraRest::Response]
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_filter'>filter</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>filter/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key,summary,issuetype,reporter,priority</span><span class='tstring_end'>'</span></span>
+  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+  <span class='id identifier rubyid_filter_url'>filter_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>searchUrl</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>return</span> <span class='id identifier rubyid_filter_url'>filter_url</span> <span class='kw'>unless</span> <span class='id identifier rubyid_filter_url'>filter_url</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span>
+
+  <span class='id identifier rubyid_filter_response'>filter_response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_filter_url'>filter_url</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_parse_search_result'>parse_search_result</span> <span class='id identifier rubyid_filter_response'>filter_response</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="issue-instance_method">
+  
+    - (<tt>Object</tt>) <strong>issue</strong>(issue_id) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_issue'>issue</span><span class='lparen'>(</span><span class='id identifier rubyid_issue_id'>issue_id</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issue/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_issue_id'>issue_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key,summary,issuetype,reporter,priority</span><span class='tstring_end'>'</span></span>
+  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+  <span class='comment'>#TODO parse issue result
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="jqlquery-instance_method">
+  
+    - (<tt>Object</tt>) <strong>jqlquery</strong>(jql_string, return_fields = nil, maxresults = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    get tickets from by a jql query
+
+@param[String] jql_string - jql string
+@param[String] return_fields default will be 'key,summary'
+@param[String] maxresults max number of results default will be 300
+@return[JiraRest::Response]
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_jqlquery'>jqlquery</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>search</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_parse_search_result'>parse_search_result</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_by_hash-instance_method">
+  
+    - (<tt>Object</tt>) <strong>query_by_hash</strong>(hash_tickets, return_fields = nil, maxresults = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    get tickets by hash
+
+@param[Hash] hash_tickets - verify,in progress, open, reopened, closed
+@param[String] return_fields default will be 'key,summary'
+@param[String] maxresults max number of results default will be 300
+@return[JiraRest::Response]
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_by_hash'>query_by_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash_tickets'>hash_tickets</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_jql_string'>jql_string</span> <span class='op'>=</span> <span class='id identifier rubyid_hash_tickets'>hash_tickets</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> in (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> AND </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>search</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='comment'>#search_url = construct_query URI.escape(jql_string), return_fields, maxresults
+</span>  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
+  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_parse_search_result'>parse_search_result</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Mar  2 10:38:03 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

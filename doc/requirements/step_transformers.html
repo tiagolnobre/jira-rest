@@ -1,0 +1,851 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Step Definitions and Transforms
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/cucumber.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/cucumber.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (s)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../requirements.html" title="requirements (requirements)">requirements</a></span></span>
+     &raquo; 
+    <span class="title">step_transformers</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="feature_list_link"
+        href="../feature_list.html">
+      Features
+    </a>
+  
+    <a class="full_list_link" id="featuredirectories_list_link"
+        href="../featuredirectories_list.html">
+      Features by Directory
+    </a>
+  
+    <a class="full_list_link" id="tag_list_link"
+        href="../tag_list.html">
+      Tags
+    </a>
+  
+    <a class="full_list_link" id="step_list_link"
+        href="../step_list.html">
+      Steps
+    </a>
+  
+    <a class="full_list_link" id="stepdefinition_list_link"
+        href="../stepdefinition_list.html">
+      Step Defs
+    </a>
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div class="requirements">
+  <div class="title">Step Definitions &amp; Transforms</div>
+
+  <div class="summary">
+    <div>9<a href="#step_definitions">Step Definitions</a></div>
+    <div>0<a href="#step_transforms">Step Transforms</a></div>
+    <div>0<a href="#undefined_steps">Undefined Steps</a></div>
+  </div>
+
+</div><div class="title">
+  
+     <a class="control" id="stepdefinition">[Collapse All]</a>
+     <div style="clear: right;"></div>
+   
+ 
+  
+    <a name="step_definitions">
+  
+  <div class="name">Step Definitions</div>
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition1-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Given</span>
+    <span class="name">/^I create instantiation of Jira with authentication$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+create+instantiation+of+Jira+with+authentication%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:5</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">5
+6
+7</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I create instantiation of Jira with authentication$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span>
+  <span class='ivar'>@jira</span> <span class='op'>=</span> <span class='const'>JiraRest</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://jira.atlassian.com</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tiago.l.nobre</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>123qweasd</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="4 steps">Hide 4 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Given 
+          </span>
+          <span class="defined">
+            I create instantiation of Jira with authentication
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:4</a>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:8</a>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:12</a>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:16</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition5-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I query by hash (.*)$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+query+by+hash+%28.%2A%29%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:29</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">29
+30
+31
+32
+33
+34</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I query by hash (.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_query'>query</span><span class='op'>|</span>
+  <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='period'>.</span><span class='id identifier rubyid_query_by_hash'>query_by_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tickets are empty</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Then 
+          </span>
+          <span class="defined">
+            I query by hash <span class='match'>{:project => 'DEMO', :status => '"in progress", Open'}</span>
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:5</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition9-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Given</span>
+    <span class="name">/^I search for filter id "([^"]*)"$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+search+for+filter+id+%22%28%5B%5E%22%5D%2A%29%22%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:58</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">58
+59
+60
+61
+62</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Given</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I search for filter id &quot;([^&quot;]*)&quot;$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='period'>.</span><span class='id identifier rubyid_filter'>filter</span> <span class='id identifier rubyid_id'>id</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ticket'>ticket</span><span class='op'>|</span> <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_ticket'>ticket</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Given 
+          </span>
+          <span class="defined">
+            I search for filter id "<span class='match'>12843</span>"
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:17</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition8-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Given</span>
+    <span class="name">/^I search for issue id "(.*)"$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+search+for+issue+id+%22%28.%2A%29%22%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:51</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">51
+52
+53
+54
+55
+56</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I search for issue id &quot;(.*)&quot;$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_issue'>issue</span><span class='op'>|</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='period'>.</span><span class='id identifier rubyid_issue'>issue</span> <span class='id identifier rubyid_issue'>issue</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_result'>result</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Given 
+          </span>
+          <span class="defined">
+            I search for issue id "<span class='match'>JRA-9</span>"
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:13</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        
+                        ">
+  <a name="step_definition6-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I jql query jira (.*)$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+jql+query+jira+%28.%2A%29%24%2F" target="_blank">Rubular</a>
+      
+      
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:36</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">36
+37
+38
+39
+40
+41</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I jql query jira (.*)$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_string'>string</span><span class='op'>|</span>
+  <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='period'>.</span><span class='id identifier rubyid_jqlquery'>jqlquery</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='int'>200</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span><span class='comma'>,</span> <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_error_msg'>error_msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Tickets are empty</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_jqlquery_result'>jqlquery_result</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_ticket'>ticket</span><span class='op'>|</span> <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_ticket'>ticket</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+      <div class='showSteps'>
+        [<a href='#' class='toggleSteps' alt="1 steps">Hide 1 steps</a>]
+      </div>
+    
+    <div class="steps">
+      
+      
+      <div class="step odd">
+        <div>
+          <span class="predicate">
+            Then 
+          </span>
+          <span class="defined">
+            I jql query jira <span class='match'>project in (DEMO) AND status in ("in progress", Open)</span>
+          </span>
+        </div>
+        
+        <a class="definition" style="clear: right;" href="features/Search.html">features/Search.feature:9</a>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        nodefinitions
+                        ">
+  <a name="step_definition2-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Given</span>
+    <span class="name">/^I create instantiation of Jira$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+create+instantiation+of+Jira%24%2F" target="_blank">Rubular</a>
+      
+      | UNUSED
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:9</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">9
+10
+11</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I create instantiation of Jira$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span>
+  <span class='ivar'>@jira</span> <span class='op'>=</span> <span class='const'>JiraRest</span><span class='op'>::</span><span class='const'>Search</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>https://jira.atlassian.com</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+    <div class="steps">
+      
+      <div class="undefined">No steps were found to match this step definition.</div>
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        nodefinitions
+                        ">
+  <a name="step_definition7-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I check that the project "([^"]*)" existence is "([^"]*)"$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+check+that+the+project+%22%28%5B%5E%22%5D%2A%29%22+existence+is+%22%28%5B%5E%22%5D%2A%29%22%24%2F" target="_blank">Rubular</a>
+      
+      | UNUSED
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:43</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">43
+44
+45
+46
+47
+48
+49</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I check that the project &quot;([^&quot;]*)&quot; existence is &quot;([^&quot;]*)&quot;$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_project'>project</span><span class='comma'>,</span> <span class='id identifier rubyid_exist'>exist</span><span class='op'>|</span>
+
+  <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_get_versions'>get_versions</span> <span class='id identifier rubyid_project'>project</span>
+  <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Project: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_project'>project</span><span class='rbrace'>}</span><span class='tstring_content'> - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_result'>result</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Message: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_msg'>msg</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_exist'>exist</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+    <div class="steps">
+      
+      <div class="undefined">No steps were found to match this step definition.</div>
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        nodefinitions
+                        ">
+  <a name="step_definition4-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I can get all versions for the "([^"]*)" project$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+can+get+all+versions+for+the+%22%28%5B%5E%22%5D%2A%29%22+project%24%2F" target="_blank">Rubular</a>
+      
+      | UNUSED
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:22</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">22
+23
+24
+25
+26
+27</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I can get all versions for the &quot;([^&quot;]*)&quot; project$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_project'>project</span><span class='op'>|</span>
+  <span class='id identifier rubyid_resp'>resp</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_get_versions'>get_versions</span> <span class='id identifier rubyid_project'>project</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='id identifier rubyid_resp'>resp</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_all_versions'>all_versions</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Can\'t get next version</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>All version: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_all_versions'>all_versions</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+    <div class="steps">
+      
+      <div class="undefined">No steps were found to match this step definition.</div>
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+
+
+<div class="transformer stepdefinition
+                        nodefinitions
+                        ">
+  <a name="step_definition3-stepdefinition"></a>
+  <div class="title">
+    <span class="pre">Then</span>
+    <span class="name">/^I can get the versions of the project with the key "([^"]*)"$/</span>
+    <div style="float: right;">
+      <a href="http://rubular.com/?regex=%2F%5EI+can+get+the+versions+of+the+project+with+the+key+%22%28%5B%5E%22%5D%2A%29%22%24%2F" target="_blank">Rubular</a>
+      
+      | UNUSED
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+  <div class="details">
+    
+    <div class="meta" style="clear: right;">
+      <div class="file">features/step_definitions/test_steps.rb:13</div>
+    </div>
+    
+    <!-- Comments -->
+    <div>
+      
+    </div>
+    
+
+    <!-- Source Code -->
+    <div class="method_details_list">
+      <table class="source_code">
+        <tr>
+          <td>
+            <pre class="lines">13
+14
+15
+16
+17
+18
+19
+20</pre>
+          </td>
+          <td>
+            <pre class="code"><span class='const'>Then</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^I can get the versions of the project with the key &quot;([^&quot;]*)&quot;$</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+  <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_get_versions'>get_versions</span> <span class='id identifier rubyid_key'>key</span>
+  <span class='id identifier rubyid_assert_equal'>assert_equal</span><span class='lparen'>(</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_actual_version'>actual_version</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Can\'t get actual version</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Actual version: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_actual_version'>actual_version</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_assert'>assert</span><span class='lparen'>(</span><span class='op'>!</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_actual_version'>actual_version</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Can\'t get next version</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Next version: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@jira</span><span class='period'>.</span><span class='id identifier rubyid_next_version'>next_version</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Matching Step Instances -->
+    
+    <div class="steps">
+      
+      <div class="undefined">No steps were found to match this step definition.</div>
+      
+    </div>
+    
+  </div>
+
+  <div style="margin: 30px 20px; border-top: 1px dotted #AAA;"></div>
+
+</div>
+
+<div class="title">
+  
+     <a class="control" id="steptransform">[Collapse All]</a>
+     <div style="clear: right;"></div>
+   
+ 
+  
+    <a name="step_transforms">
+  
+  <div class="name">Step Transforms</div>
+</div>
+
+<div class="title">
+  
+ 
+  
+    <a name="undefined_steps">
+  
+  <div class="name">Undefined Steps</div>
+</div>
+
+<div class="transformer">
+  <div class="steps">
+  
+    <div class="steps">
+      <div class="undefined">No undefined steps</div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+    <div id="footer">
+  Generated on Sun Mar  2 10:38:03 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
