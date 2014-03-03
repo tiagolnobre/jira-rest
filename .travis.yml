@@ -14,4 +14,4 @@ env:
 
 
 after_success:
-- '[ integration = "stable" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+- '[ integration = "stable" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/macwadu/jira-rest.git HEAD:master'
