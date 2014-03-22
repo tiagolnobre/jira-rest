@@ -9,7 +9,7 @@ jira-rest
 
 Add this line to your application's Gemfile:
 
-    gem 'jira-rest'
+    gem 'jirarest'
 
 And then execute:
 
