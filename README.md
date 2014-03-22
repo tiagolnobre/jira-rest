@@ -29,11 +29,17 @@ Or install it yourself as:
     
     hash_query = {:project => 'DEMO', :status => '"in progress", Open'}
     @jira.search.query_by_hash(hash_query)
+    
+    optional:
+    @jira.search.query_by_hash(hash_query, return_fields, maxresults)
   
   **Query by jql string** 
     
     jql_query = "project in (DEMO) AND status in ("in progress", Open)"
     @jira.search.jqlquery(jql_query)
+    
+    optional:
+    @jira.search.jqlquery(jql_query, return_fields, maxresults)
   
   **Search by issue key**
   
