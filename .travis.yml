@@ -5,11 +5,15 @@ rvm:
 - 2.1.0
 - rbx
 - jruby
+
 deploy:
-    provider: rubygems
-    api_key: "9366a5792327ea3ee44371e8a625aaf8"
-    on:
-        tags: true
+  provider: rubygems
+  api_key:
+    secure: 9366a5792327ea3ee44371e8a625aaf8
+  gem: jira-rest
+  on:
+    tags: true
+    all_branches: true
         
 env:
   global:
