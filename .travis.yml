@@ -6,6 +6,10 @@ rvm:
 - rbx
 - jruby
 
+branches:
+  only:
+    - master
+
 deploy:
   provider: rubygems
   api_key:
