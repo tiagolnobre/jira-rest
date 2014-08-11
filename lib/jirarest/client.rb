@@ -8,13 +8,11 @@ module JiraRest
 
     Token = Struct.new(:url, :header)
     Response = Struct.new(:success, :body, :error_msg, :optional)
+    ParsedResponse = Struct.new(:result)
 
     def initialize(jira_host, username=nil, password=nil)
-
       jira_url = "#{jira_host}/rest/api/latest/"
-
-      generate jira_url, username, password
-
+      generate(jira_url, username, password)
     end
 
     def generate(url, username=nil, password=nil)
@@ -38,8 +36,6 @@ module JiraRest
         return false
       end
     end
-
-
 
 
     def self.construct_url(endpoint, params)
@@ -86,34 +82,28 @@ module JiraRest
       end
     end
 
-    def self.parse_search_result(response, fields=nil)
-      code = response.code
-      response = response.parsed_response
-      case code
-        when 200
-          jira_tickets = []
-          if response.has_key? 'issues'
-            response['issues'].each do |tickets|
-              if !tickets['key'].nil? and !tickets['fields']['summary'].nil?
-                jira_tickets << [tickets['key'], tickets['fields']['summary'], tickets['self']]
-              end
-            end
-          elsif !fields.nil?
-            sss = ""
-             fields.split(',').each {|field|
-                p field  if response[field]
-                sss << response[field]  if response[field]
+    def self.parse_response1(response, fields=nil)
 
-             }
-                p sss
+      jira_tickets = []
+
+      p response
+
+      if response.has_key? 'issues'
+        response['issues'].each do |tickets|
+          if !tickets['key'].nil? and !tickets['fields']['summary'].nil?
+            jira_tickets << [tickets['key'], tickets['fields']['summary'], tickets['self']]
           end
-          return Response.new(true, jira_tickets.sort_by { |x| x.first }, nil)
-        when (400..499)
-          msg = response['errorMessages'].nil? ? code : response['errorMessages'].join("\n")
-          return Response.new(false, nil, msg)
-        else
-          return Response.new(false, nil, 'fail')
+        end
+      elsif !fields.nil?
+        sss = ""
+         fields.split(',').each { |field|
+            p field if response[field]
+            sss << response[field]  if response[field]
+
+         }
+            p sss
       end
+      return ParsedResponse.new(jira_tickets.sort_by { |x| x.first })
     end
   end
 end
