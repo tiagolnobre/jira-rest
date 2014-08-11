@@ -8,7 +8,6 @@ module JiraRest
 
     Token = Struct.new(:url, :header)
     Response = Struct.new(:success, :body, :error_msg, :optional)
-    ParsedResponse = Struct.new(:result)
 
     def initialize(jira_host, username=nil, password=nil)
       jira_url = "#{jira_host}/rest/api/latest/"
@@ -21,11 +20,9 @@ module JiraRest
       @token = Token.new(url, header)
     end
 
-
     def search
       JiraRest::Search.new(self)
     end
-
 
     def self.get(url, header)
       begin
@@ -68,12 +65,17 @@ module JiraRest
     end
 
     #TODO refactor to use in all methods
-    def self.handle_response(response, key=nil)
+    def self.handle_response(response, key=nil, parsed_response=false)
       raise ArgumentError, 'Response is not a HTTParty::Response' unless response.class == HTTParty::Response
       case response.code
         when 200
-          parsed_response = key.nil? ? response.parsed_response : response.parsed_response[key]
-          return Response.new(true, parsed_response, nil)
+          parsed = key.nil? ? response.parsed_response : response.parsed_response[key]
+          if parsed_response
+            return Response.new(true, parse_response(parsed), nil)
+          else
+            return Response.new(true, parsed, nil)
+          end
+
         when (400..499)
           msg = response['errorMessages'].nil? ? response.code : response['errorMessages'].join("\n")
           return Response.new(false, response.response.message, msg)
@@ -82,12 +84,8 @@ module JiraRest
       end
     end
 
-    def self.parse_response1(response, fields=nil)
-
+    def self.parse_response(response, fields=nil)
       jira_tickets = []
-
-      p response
-
       if response.has_key? 'issues'
         response['issues'].each do |tickets|
           if !tickets['key'].nil? and !tickets['fields']['summary'].nil?
@@ -102,8 +100,12 @@ module JiraRest
 
          }
             p sss
+      else
+          if !response['key'].nil? and !response['fields']['summary'].nil?
+            jira_tickets << [response['key'], response['fields']['summary'], response['self'], response['description']]
+          end
       end
-      return ParsedResponse.new(jira_tickets.sort_by { |x| x.first })
+      return jira_tickets.sort_by { |x| x.first }
     end
   end
 end

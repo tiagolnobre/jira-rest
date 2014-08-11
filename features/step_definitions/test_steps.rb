@@ -38,7 +38,6 @@ Then(/^I jql query jira (.*)$/) do |string|
   assert_equal(true, jqlquery_result.success, jqlquery_result.error_msg)
   puts jqlquery_result.body
   assert(!jqlquery_result.body.empty?, 'Tickets are empty')
-  jqlquery_result.body.each { |ticket| p ticket }
 end
 
 Then(/^I check that the project "([^"]*)" existence is "([^"]*)"$/) do |project, exist|

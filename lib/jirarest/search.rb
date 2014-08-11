@@ -13,7 +13,7 @@ module JiraRest
       issue.fields = 'key,summary,issuetype,reporter,priority'
       search_url = Client.construct_url @token.url + url, issue
       response = Client.get search_url, @token.header
-      Client.handle_response(response)
+      Client.handle_response(response, nil, true)
       #TODO parse issue result
     end
 
@@ -30,8 +30,7 @@ module JiraRest
       filter_url = Client.handle_response(response, 'searchUrl')
       return filter_url unless filter_url.success
       filter_response = Client.get filter_url.body, @token.header
-      resp = Client.handle_response(response)
-      Client.parse_response1 filter_response.body
+      Client.handle_response(response, nil, true)
     end
 
 
@@ -45,7 +44,7 @@ module JiraRest
       jql_string = hash_tickets.map { |k, v| "#{k} in (#{v})" }.join(' AND ')
       search_url = Client.construct_url('search', Url.new(URI.encode(jql_string), return_fields, maxresults))
       response = Client.get @token.url + search_url, @token.header
-      Client.parse_search_result(response)
+      Client.handle_response(response, nil, true)
     end
 
     #get tickets from by a jql query
@@ -57,7 +56,7 @@ module JiraRest
     def jqlquery(jql_string, return_fields=nil, maxresults=nil)
       search_url = Client.construct_url('search', Url.new(URI.encode(jql_string), return_fields, maxresults))
       response = Client.get @token.url + search_url, @token.header
-      Client.parse_search_result(response)
+      Client.handle_response(response, nil, true)
     end
   end
 end
