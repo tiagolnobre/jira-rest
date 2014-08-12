@@ -18,7 +18,7 @@ deploy:
   on:
     tags: true
     all_branches: true
-        
+
 env:
   global:
     secure: T8L84sWENsNlck2SGTUOmB1OKsJRiam0jsUIXi0QhGlAPSP92h1WvpohixBtbp8FpaPqsG9YSwKj20VzauqwnEWkbtv0Yu9tfjJwWIvlZwdJHRp1KBRs4HeOlOiX6HEv1a0ahBp0pOK3jLojoDfxiqHU8H7B4GhKw0f5G0vkUvc=
@@ -27,6 +27,3 @@ env:
 after_success:
 - coveralls
 - '[ "integration" = "stable" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
-
-
-

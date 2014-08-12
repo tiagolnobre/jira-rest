@@ -27,21 +27,20 @@ Then(/^I can get all versions for the "([^"]*)" project$/) do |project|
 end
 
 Then(/^I query by hash (.*)$/) do |query|
-  jqlquery_result = @jira.search.query_by_hash(eval(query))
-  assert_equal(true, jqlquery_result.success, jqlquery_result.error_msg)
-  puts jqlquery_result.body
-  assert(!jqlquery_result.body.empty?, 'Tickets are empty')
+  result = @jira.search.query_by_hash(eval(query))
+  assert_equal(true, result.success, result.error_msg)
+  puts result.body
+  assert(!result.body.empty?, 'Tickets are empty')
 end
 
 Then(/^I jql query jira (.*)$/) do |string|
-  jqlquery_result = @jira.search.jqlquery(string, nil, 200)
-  assert_equal(true, jqlquery_result.success, jqlquery_result.error_msg)
-  assert(!jqlquery_result.body.empty?, 'Tickets are empty')
-  jqlquery_result.body.each { |ticket| p ticket }
+  result = @jira.search.jqlquery(string, nil, 200)
+  assert_equal(true, result.success, result.error_msg)
+  puts result.body
+  assert(!result.body.empty?, 'Tickets are empty')
 end
 
 Then(/^I check that the project "([^"]*)" existence is "([^"]*)"$/) do |project, exist|
-
   result, msg = @jira.get_versions project
   p "Project: #{project} - #{result}"
   p "Message: #{msg}"
@@ -53,10 +52,12 @@ Given /^I search for issue id "(.*)"$/ do |issue|
   p result
   assert_equal(true, result.success, result.error_msg)
   puts result.body
+  assert(!result.body.empty?, 'Tickets are empty')
 end
 
 Given(/^I search for filter id "([^"]*)"$/) do |id|
   result = @jira.search.filter id
   assert_equal(true, result.success, result.error_msg)
-  result.body.each { |ticket| p ticket }
+  puts result.body
+  assert(!result.body.empty?, 'Tickets are empty')
 end
