@@ -30,7 +30,7 @@ module JiraRest
       filter_url = Client.handle_response(response, 'searchUrl')
       return filter_url unless filter_url.success
       filter_response = Client.get filter_url.body, @token.header
-      Client.handle_response(response, nil, true)
+      Client.handle_response(filter_response, nil, true)
     end
 
 

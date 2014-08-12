@@ -64,7 +64,7 @@ module JiraRest
       end.join('&')
     end
 
-    #TODO refactor to use in all methods
+
     def self.handle_response(response, key=nil, parsed_response=false)
       raise ArgumentError, 'Response is not a HTTParty::Response' unless response.class == HTTParty::Response
       case response.code
