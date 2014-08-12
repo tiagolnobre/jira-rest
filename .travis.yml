@@ -5,9 +5,20 @@ rvm:
 - 2.1.0
 - rbx
 - jruby
-#deploy:
-#  on:
-#    all_branches: true
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: rubygems
+  api_key:
+    secure: 9366a5792327ea3ee44371e8a625aaf8
+  gem: jira-rest
+  on:
+    tags: true
+    all_branches: true
+
 env:
   global:
     secure: T8L84sWENsNlck2SGTUOmB1OKsJRiam0jsUIXi0QhGlAPSP92h1WvpohixBtbp8FpaPqsG9YSwKj20VzauqwnEWkbtv0Yu9tfjJwWIvlZwdJHRp1KBRs4HeOlOiX6HEv1a0ahBp0pOK3jLojoDfxiqHU8H7B4GhKw0f5G0vkUvc=
@@ -16,4 +27,3 @@ env:
 after_success:
 - coveralls
 - '[ "integration" = "stable" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
-
