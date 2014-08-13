@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
   File: README
   
@@ -69,7 +69,7 @@
 
 <h2 id="installation-1">Installation</h2>
 
-<p>Add this line to your application&#8217;s Gemfile:</p>
+<p>Add this line to your application’s Gemfile:</p>
 
 <p><code>
 gem 'jirarest'
@@ -90,7 +90,7 @@ $ gem install jira-rest
 <h2 id="usage">Usage</h2>
 
 <p>```
-require &#8216;jira-rest&#8217;</p>
+require ‘jira-rest’</p>
 
 <p>@jira = JiraRest::Client.new(jira_host, username, password)
 ```</p>
@@ -98,7 +98,7 @@ require &#8216;jira-rest&#8217;</p>
 <p><strong>Query by hash</strong></p>
 
 <p>```
-hash_query = =&gt; &#8216;DEMO&#8217;, :status =&gt; &#8216;&#8220;in progress&#8221;, Open&#8217;
+hash_query = =&gt; ‘DEMO’, :status =&gt; ‘“in progress”, Open’
 @jira.search.query_by_hash(hash_query)</p>
 
 <p>optional:
@@ -108,7 +108,7 @@ hash_query = =&gt; &#8216;DEMO&#8217;, :status =&gt; &#8216;&#8220;in progress&#
 <p><strong>Query by jql string</strong></p>
 
 <p>```
-jql_query = &#8220;project in (DEMO) AND status in (&#8220;in progress&#8221;, Open)&#8221;
+jql_query = “project in (DEMO) AND status in (“in progress”, Open)”
 @jira.search.jqlquery(jql_query)</p>
 
 <p>optional:
@@ -156,7 +156,7 @@ $ gem install jira-rest
 <h2 id="usage-1">Usage</h2>
 
 <p>```
-require &#8216;jira-rest&#8217;</p>
+require ‘jira-rest’</p>
 
 <p>@jira = JiraRest::Client.new(jira_host, username, password)
 ```</p>
@@ -164,7 +164,7 @@ require &#8216;jira-rest&#8217;</p>
 <p><strong>Query by hash</strong></p>
 
 <p>```
-hash_query = =&gt; &#8216;DEMO&#8217;, :status =&gt; &#8216;&#8220;in progress&#8221;, Open&#8217;
+hash_query = =&gt; ‘DEMO’, :status =&gt; ‘“in progress”, Open’
 @jira.search.query_by_hash(hash_query)</p>
 
 <p>optional:
@@ -174,7 +174,7 @@ hash_query = =&gt; &#8216;DEMO&#8217;, :status =&gt; &#8216;&#8220;in progress&#
 <p><strong>Query by jql string</strong></p>
 
 <p>```
-jql_query = &#8220;project in (DEMO) AND status in (&#8220;in progress&#8221;, Open)&#8221;
+jql_query = “project in (DEMO) AND status in (“in progress”, Open)”
 @jira.search.jqlquery(jql_query)</p>
 
 <p>optional:
@@ -205,9 +205,9 @@ jql_query = &#8220;project in (DEMO) AND status in (&#8220;in progress&#8221;, O
 </div></div>
 
     <div id="footer">
-  Generated on Wed Aug 13 12:49:13 2014 by
+  Generated on Wed Aug 13 12:52:28 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.0).
 </div>
 
   </body>
