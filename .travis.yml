@@ -27,4 +27,4 @@ env:
 after_success:
   - coveralls
   - '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
-  - .utility/initiate-publish.sh
+  - .utility/push_doc_to_gh_pages.sh
