@@ -4,6 +4,8 @@ if [ "$TRAVIS_REPO_SLUG" == "macwadu/jira-rest" ] && [ "$TRAVIS_PULL_REQUEST" ==
 
   echo -e "Publishing documentation...\n"
 
+  rake yard
+
   cp -R doc/ $HOME/doc-latest
 
   cd $HOME
