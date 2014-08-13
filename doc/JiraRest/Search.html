@@ -273,9 +273,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 5</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
-  <span class='ivar'>@token</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span>
-<span class='kw'>end</span></pre>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='rubyid_@token ivar id'>@token</span> <span class='assign token'>=</span> <span class='rubyid_params identifier id'>params</span><span class='dot token'>.</span><span class='rubyid_token identifier id'>token</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -330,17 +331,18 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 25</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_filter'>filter</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>filter/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-  <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key,summary,issuetype,reporter,priority</span><span class='tstring_end'>'</span></span>
-  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span>
-  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
-  <span class='id identifier rubyid_filter_url'>filter_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>searchUrl</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_filter_url'>filter_url</span> <span class='kw'>unless</span> <span class='id identifier rubyid_filter_url'>filter_url</span><span class='period'>.</span><span class='id identifier rubyid_success'>success</span>
-  <span class='id identifier rubyid_filter_response'>filter_response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_filter_url'>filter_url</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
-  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_filter_response'>filter_response</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_filter identifier id'>filter</span><span class='lparen token'>(</span><span class='rubyid_id identifier id'>id</span><span class='rparen token'>)</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='string val'>&#39;filter/&#39;</span> <span class='plus op'>+</span> <span class='rubyid_id identifier id'>id</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_issue identifier id'>issue</span> <span class='assign token'>=</span> <span class='rubyid_Url constant id'>Url</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_issue identifier id'>issue</span><span class='dot token'>.</span><span class='rubyid_fields identifier id'>fields</span> <span class='assign token'>=</span> <span class='string val'>&#39;key,summary,issuetype,reporter,priority&#39;</span>
+  <span class='rubyid_search_url identifier id'>search_url</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_construct_url identifier id'>construct_url</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='rubyid_url identifier id'>url</span><span class='comma token'>,</span> <span class='rubyid_issue identifier id'>issue</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span> <span class='rubyid_search_url identifier id'>search_url</span><span class='comma token'>,</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_header identifier id'>header</span>
+  <span class='rubyid_filter_url identifier id'>filter_url</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_handle_response identifier id'>handle_response</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='comma token'>,</span> <span class='string val'>&#39;searchUrl&#39;</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_filter_url identifier id'>filter_url</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_filter_url identifier id'>filter_url</span><span class='dot token'>.</span><span class='rubyid_success identifier id'>success</span>
+  <span class='rubyid_filter_response identifier id'>filter_response</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span> <span class='rubyid_filter_url identifier id'>filter_url</span><span class='dot token'>.</span><span class='rubyid_body identifier id'>body</span><span class='comma token'>,</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_header identifier id'>header</span>
+  <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_handle_response identifier id'>handle_response</span><span class='lparen token'>(</span><span class='rubyid_filter_response identifier id'>filter_response</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -375,16 +377,17 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 10</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_issue'>issue</span><span class='lparen'>(</span><span class='id identifier rubyid_issue_id'>issue_id</span><span class='rparen'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_issue identifier id'>issue</span><span class='lparen token'>(</span><span class='rubyid_issue_id identifier id'>issue_id</span><span class='rparen token'>)</span>
 
-  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>issue/</span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_issue_id'>issue_id</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='id identifier rubyid_issue'>issue</span> <span class='op'>=</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-  <span class='id identifier rubyid_issue'>issue</span><span class='period'>.</span><span class='id identifier rubyid_fields'>fields</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>key,summary,issuetype,reporter,priority</span><span class='tstring_end'>'</span></span>
-  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span> <span class='id identifier rubyid_issue'>issue</span>
-  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
-  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-  <span class='comment'>#TODO parse issue result
-</span><span class='kw'>end</span></pre>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='string val'>&#39;issue/&#39;</span> <span class='plus op'>+</span> <span class='rubyid_issue_id identifier id'>issue_id</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_issue identifier id'>issue</span> <span class='assign token'>=</span> <span class='rubyid_Url constant id'>Url</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_issue identifier id'>issue</span><span class='dot token'>.</span><span class='rubyid_fields identifier id'>fields</span> <span class='assign token'>=</span> <span class='string val'>&#39;key,summary,issuetype,reporter,priority&#39;</span>
+  <span class='rubyid_search_url identifier id'>search_url</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_construct_url identifier id'>construct_url</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='rubyid_url identifier id'>url</span><span class='comma token'>,</span> <span class='rubyid_issue identifier id'>issue</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span> <span class='rubyid_search_url identifier id'>search_url</span><span class='comma token'>,</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_header identifier id'>header</span>
+  <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_handle_response identifier id'>handle_response</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+  <span class='comment val'>#TODO parse issue result</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -404,7 +407,7 @@
     get tickets from by a jql query
 
 @param[String] jql_string - jql string
-@param[String] return_fields default will be 'key,summary'
+@param[String] return_fields default will be &#39;key,summary&#39;
 @param[String] maxresults max number of results default will be 300
 @return[JiraRest::Response]
 
@@ -428,11 +431,12 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_jqlquery'>jqlquery</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>search</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
-  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_jqlquery identifier id'>jqlquery</span><span class='lparen token'>(</span><span class='rubyid_jql_string identifier id'>jql_string</span><span class='comma token'>,</span> <span class='rubyid_return_fields identifier id'>return_fields</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_maxresults identifier id'>maxresults</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_search_url identifier id'>search_url</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_construct_url identifier id'>construct_url</span><span class='lparen token'>(</span><span class='string val'>&#39;search&#39;</span><span class='comma token'>,</span> <span class='rubyid_Url constant id'>Url</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_encode identifier id'>encode</span><span class='lparen token'>(</span><span class='rubyid_jql_string identifier id'>jql_string</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_return_fields identifier id'>return_fields</span><span class='comma token'>,</span> <span class='rubyid_maxresults identifier id'>maxresults</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='rubyid_search_url identifier id'>search_url</span><span class='comma token'>,</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_header identifier id'>header</span>
+  <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_handle_response identifier id'>handle_response</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -452,7 +456,7 @@
     get tickets by hash
 
 @param[Hash] hash_tickets - verify,in progress, open, reopened, closed
-@param[String] return_fields default will be 'key,summary'
+@param[String] return_fields default will be &#39;key,summary&#39;
 @param[String] maxresults max number of results default will be 300
 @return[JiraRest::Response]
 
@@ -479,14 +483,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jirarest/search.rb', line 44</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_query_by_hash'>query_by_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash_tickets'>hash_tickets</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_jql_string'>jql_string</span> <span class='op'>=</span> <span class='id identifier rubyid_hash_tickets'>hash_tickets</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_k'>k</span><span class='rbrace'>}</span><span class='tstring_content'> in (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> AND </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_search_url'>search_url</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_construct_url'>construct_url</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>search</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>Url</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_encode'>encode</span><span class='lparen'>(</span><span class='id identifier rubyid_jql_string'>jql_string</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_return_fields'>return_fields</span><span class='comma'>,</span> <span class='id identifier rubyid_maxresults'>maxresults</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_query_by_hash identifier id'>query_by_hash</span><span class='lparen token'>(</span><span class='rubyid_hash_tickets identifier id'>hash_tickets</span><span class='comma token'>,</span> <span class='rubyid_return_fields identifier id'>return_fields</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_maxresults identifier id'>maxresults</span><span class='assign token'>=</span><span class='rubyid_nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='rubyid_jql_string identifier id'>jql_string</span> <span class='assign token'>=</span> <span class='rubyid_hash_tickets identifier id'>hash_tickets</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='lbrace token'>{</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span> <span class='dstring node'>&quot;#{k} in (#{v})&quot;</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&#39; AND &#39;</span><span class='rparen token'>)</span>
+  <span class='rubyid_search_url identifier id'>search_url</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_construct_url identifier id'>construct_url</span><span class='lparen token'>(</span><span class='string val'>&#39;search&#39;</span><span class='comma token'>,</span> <span class='rubyid_Url constant id'>Url</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_encode identifier id'>encode</span><span class='lparen token'>(</span><span class='rubyid_jql_string identifier id'>jql_string</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_return_fields identifier id'>return_fields</span><span class='comma token'>,</span> <span class='rubyid_maxresults identifier id'>maxresults</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
 
-  <span class='comment'>#search_url = construct_query URI.escape(jql_string), return_fields, maxresults
-</span>  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span> <span class='op'>+</span> <span class='id identifier rubyid_search_url'>search_url</span><span class='comma'>,</span> <span class='ivar'>@token</span><span class='period'>.</span><span class='id identifier rubyid_header'>header</span>
-  <span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_handle_response'>handle_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+  <span class='comment val'>#search_url = construct_query URI.escape(jql_string), return_fields, maxresults</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_get identifier id'>get</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='rubyid_search_url identifier id'>search_url</span><span class='comma token'>,</span> <span class='rubyid_@token ivar id'>@token</span><span class='dot token'>.</span><span class='rubyid_header identifier id'>header</span>
+  <span class='rubyid_Client constant id'>Client</span><span class='dot token'>.</span><span class='rubyid_handle_response identifier id'>handle_response</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
     </td>
   </tr>
 </table>
@@ -497,9 +502,9 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Aug 13 14:24:43 2014 by
+  Generated on Wed Aug 13 14:25:39 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.0).
 </div>
 
   </body>
