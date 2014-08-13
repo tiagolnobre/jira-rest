@@ -21,5 +21,5 @@ env:
   - secure: KulQLPiNqmJ8G56N1bSmbVH0e8r58tGstKv7lgPKHH7aLSskZpOzi4aC2jQJMcCti6vsbWORQuwRyhlG8v/iLbYYdrPquf46mQOIjkJ7i/qOnAOfaomMo2jJso/w7/dtvjH2DkCWelTdhx7HKU8TRF0xjBdO6omWVi7RqmZokhE=
 after_success:
 - coveralls
-- '[ "${TRAVIS_BRANCH}" = "integration" ] && git push -fq https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+- '[ "${TRAVIS_BRANCH}" = "integration" ] && git push -f https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
 - ".utility/push_doc_to_gh_pages.sh"
