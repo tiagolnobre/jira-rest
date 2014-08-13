@@ -23,4 +23,5 @@ env:
 after_success:
 - coveralls
 - '[ "${TRAVIS_BRANCH}" = "integration" ] && git push -f https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+- 'git tag v${GEM_VERSION} && git git push -f https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git --tags'
 - ".utility/push_doc_to_gh_pages.sh"

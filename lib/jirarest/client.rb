@@ -10,11 +10,8 @@ module JiraRest
     Response = Struct.new(:success, :body, :error_msg, :optional)
 
     def initialize(jira_host, username=nil, password=nil)
-
       jira_url = "#{jira_host}/rest/api/latest/"
-
       generate jira_url, username, password
-
     end
 
     def generate(url, username=nil, password=nil)
@@ -36,9 +33,6 @@ module JiraRest
         return false
       end
     end
-
-
-
 
     def self.construct_url(endpoint, params)
       p "Query: #{params.jql}" unless params.jql.nil?

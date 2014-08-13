@@ -6,16 +6,13 @@ module JiraRest
       @token = params.token
     end
 
-
     def issue(issue_id)
-
       url = 'issue/' + issue_id.to_s
       issue = Url.new
       issue.fields = 'key,summary,issuetype,reporter,priority'
       search_url = Client.construct_url @token.url + url, issue
       response = Client.get search_url, @token.header
       Client.handle_response(response, nil, true)
-      #TODO parse issue result
     end
 
     #get tickets from filter id
