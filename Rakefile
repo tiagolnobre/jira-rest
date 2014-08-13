@@ -16,11 +16,11 @@ Cucumber::Rake::Task.new(:features) do |t|
 end
 
 YARD::Rake::YardocTask.new do |t|
-  %x(mkdir ~/.yard) unless File.exists? File.expand_path('~/.yard')
-  %x(yard config load_plugins true)
+  #%x(mkdir ~/.yard) unless File.exists? File.expand_path('~/.yard')
+  #%x(yard config load_plugins true)
 
   t.files = %w[lib/**/*.rb features/**/*.feature features/**/*.rb - README.md]
-  t.options = %w(-M kramdown --output-dir /Users/tiagonobre/Downloads/jira-rest/jira-rest.wiki)
+  t.options = %w(-M kramdown)
 end
 
 task :default => :features
