@@ -1,10 +1,10 @@
 language: ruby
 rvm:
-- 1.9.3
-- 2.0.0
-- 2.1.0
-- rbx
-- jruby
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+  - rbx
+  - jruby
 
 branches:
   only:
@@ -25,5 +25,6 @@ env:
 
 
 after_success:
-- coveralls
-- '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+  - coveralls
+  - '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+  - .utility/initiate-publish.sh
