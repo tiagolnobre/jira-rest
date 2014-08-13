@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version                   = JiraRest::VERSION
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors                   = ['tiago.l.nobre@gmail.com']
-  s.date                      = '2013-11-08'
-  s.description               = ''
+  s.date                      = Time.now
+  s.description               = 'jira-rest is a ruby lib to interact with JIRA'
   s.email                     = 'tiago.l.nobre@gmail.com'
   s.extra_rdoc_files          = %w( LICENSE.txt README.md )
   s.files                     = Dir.glob('{lib}/**/*')
@@ -26,8 +26,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency('rake', '~> 10.1')
   s.add_development_dependency('yard', '~> 0.8')
   s.add_development_dependency('yard-cucumber', '~> 2.3')
-  s.add_development_dependency('kramdown','~> 1.3')
-  s.add_development_dependency('coveralls')
+  s.add_development_dependency('kramdown', '~> 1.3')
+  s.add_development_dependency('coveralls', '~> 0')
 
 end
 

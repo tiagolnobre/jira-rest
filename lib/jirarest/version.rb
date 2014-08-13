@@ -1,3 +1,3 @@
 module JiraRest
-  VERSION = "0.1." + (defined?(ENV['TRAVIS_BUILD_NUMBER']) ? '0' : ENV['TRAVIS_BUILD_NUMBER'])
+  VERSION = "0.1." + (ENV['TRAVIS_BUILD_NUMBER'].nil? ? '0' : ENV['TRAVIS_BUILD_NUMBER'])
 end
