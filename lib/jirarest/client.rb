@@ -104,7 +104,7 @@ module JiraRest
             sss << response[field]  if response[field]
 
          }
-            p sss
+          p sss
       else
           if !response['key'].nil? and !response['fields']['summary'].nil?
             jira_tickets << [response['key'], response['fields']['summary'], response['self'], response['description']]
