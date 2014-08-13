@@ -1,5 +1,8 @@
 require 'test/unit'
 include Test::Unit::Assertions
+require 'coveralls'
+Coveralls.wear!
+
 require 'jirarest'
 
 Given /^I create instantiation of Jira with authentication$/ do
