@@ -1,15 +1,13 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - rbx
-  - jruby
-
+- 1.9.3
+- 2.0.0
+- 2.1.0
+- rbx
+- jruby
 branches:
   only:
-    - master
-
+  - master
 deploy:
   provider: rubygems
   api_key:
@@ -18,13 +16,12 @@ deploy:
   on:
     tags: true
     all_branches: true
-
 env:
   global:
-    secure: T8L84sWENsNlck2SGTUOmB1OKsJRiam0jsUIXi0QhGlAPSP92h1WvpohixBtbp8FpaPqsG9YSwKj20VzauqwnEWkbtv0Yu9tfjJwWIvlZwdJHRp1KBRs4HeOlOiX6HEv1a0ahBp0pOK3jLojoDfxiqHU8H7B4GhKw0f5G0vkUvc=
-
-
+  - secure: T8L84sWENsNlck2SGTUOmB1OKsJRiam0jsUIXi0QhGlAPSP92h1WvpohixBtbp8FpaPqsG9YSwKj20VzauqwnEWkbtv0Yu9tfjJwWIvlZwdJHRp1KBRs4HeOlOiX6HEv1a0ahBp0pOK3jLojoDfxiqHU8H7B4GhKw0f5G0vkUvc=
+  - secure: KulQLPiNqmJ8G56N1bSmbVH0e8r58tGstKv7lgPKHH7aLSskZpOzi4aC2jQJMcCti6vsbWORQuwRyhlG8v/iLbYYdrPquf46mQOIjkJ7i/qOnAOfaomMo2jJso/w7/dtvjH2DkCWelTdhx7HKU8TRF0xjBdO6omWVi7RqmZokhE=
 after_success:
-  - coveralls
-  - '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
-  - .utility/push_doc_to_gh_pages.sh
+- coveralls
+- '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git
+  HEAD:master'
+- ".utility/push_doc_to_gh_pages.sh"

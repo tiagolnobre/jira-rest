@@ -9,6 +9,8 @@ if [ "$TRAVIS_REPO_SLUG" == "macwadu/jira-rest" ] && [ "$TRAVIS_PULL_REQUEST" ==
   cp -R doc/ $HOME/doc-latest
 
   cd $HOME
+  git config --global user.email ${GIT_NAME}
+  git config --global user.name ${GIT_EMAIL}
   git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/macwadu/jira-rest gh-pages > /dev/null
 
   cd gh-pages
