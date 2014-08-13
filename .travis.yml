@@ -26,4 +26,4 @@ env:
 
 after_success:
 - coveralls
-- '[ "integration" = "stable" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
+- '[ "${TRAVIS_BRANCH}" = "integration" ] && git push https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${TRAVIS_REPO_SLUG}.git HEAD:master'
