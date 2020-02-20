@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.summary                   = 'JIRA REST API'
   s.has_rdoc                  = 'yard'
 
-  s.add_runtime_dependency('httparty','~> 0.11')
+  s.add_runtime_dependency('httparty','0.18.0')
   s.add_development_dependency('cucumber', '~> 1.3')
   s.add_development_dependency('rake', '~> 10.1')
   s.add_development_dependency('yard', '~> 0.8')
