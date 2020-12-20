@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency('httparty','~> 0.11')
   s.add_development_dependency('cucumber', '~> 1.3')
-  s.add_development_dependency('rake', '~> 10.1')
+  s.add_development_dependency('rake', '~> 13.0')
   s.add_development_dependency('yard', '~> 0.8')
   s.add_development_dependency('yard-cucumber', '~> 2.3')
   s.add_development_dependency('kramdown', '~> 1.3')
